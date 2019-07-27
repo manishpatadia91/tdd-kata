@@ -3,7 +3,7 @@ package kata.com
 import spock.lang.Specification
 
 class CalculatorSpec extends Specification{
-	def Calculator cal = new Calculator()
+	def Calculator calc = new Calculator()
 	def "Test to add numbers"() {
 		given : "input as string"
 			input
@@ -17,3 +17,4 @@ class CalculatorSpec extends Specification{
 	}
 		
 }
+	
