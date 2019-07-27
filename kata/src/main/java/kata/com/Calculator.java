@@ -10,12 +10,16 @@ public class Calculator {
 		if (numbers.length == 1) {
 			return stringToInt(numbers[0]);
 		} else {
-			return sumOfNumbers(numbers[0], numbers[1]);
+			return sumOfNumbers(numbers);
 		}
 	}
 
-	private int sumOfNumbers(String num1, String num2) {
-		return stringToInt(num1) + stringToInt(num2);
+	private int sumOfNumbers(String[] numbers) {
+		int nSum = 0;
+		for(String num : numbers) {
+			nSum = nSum + stringToInt(num);
+		}
+		return nSum;
 	}
 
 	private int stringToInt(String str) {
