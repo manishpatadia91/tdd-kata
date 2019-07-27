@@ -3,10 +3,14 @@ package kata.com;
 public class Calculator {
 
 	public int add(String input) {
-		int nSum = -1;
 		if(input.isEmpty()) {
-			nSum = 0;
+			return 0;
 		}
-		return nSum;
+		String[] numbers = input.split(",");
+		if(numbers.length == 1){
+			return Integer.parseInt(numbers[0]);
+		}else {
+			return Integer.parseInt(numbers[0]) + Integer.parseInt(numbers[1]);
+		}
 	}
 }
