@@ -7,11 +7,7 @@ public class Calculator {
 			return 0;
 		}
 		String[] numbers = input.split(",");
-		if (numbers.length == 1) {
-			return stringToInt(numbers[0]);
-		} else {
-			return sumOfNumbers(numbers);
-		}
+		return sumOfNumbers(numbers);
 	}
 
 	private int sumOfNumbers(String[] numbers) {
