@@ -14,6 +14,8 @@ class CalculatorSpec extends Specification{
 		where : "Provided input"
 			input					||	expectedOutput
 			""						||		0
+			"1"						||		1
+			"1,2"					||		3
 	}
 		
 }
