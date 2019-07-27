@@ -16,6 +16,8 @@ class CalculatorSpec extends Specification{
 			""						||		0
 			"1"						||		1
 			"1,2"					||		3
+			"1,2,3"					||		6
+			"1,2,3,4,8"				||		18
 	}
 		
 }
