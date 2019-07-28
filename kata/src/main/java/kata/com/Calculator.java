@@ -14,15 +14,28 @@ public class Calculator {
 	}
 
 	private String[] tokenizer(String input) {
-		if(input.startsWith("//")) {
-			Matcher m = Pattern.compile("//(.)\n(.*)").matcher(input);
-			m.matches();
-			String customDelimiter = m.group(1);
-			String numbers = m.group(2);
-			return numbers.split(customDelimiter);
+		if(isCustomDelimiter(input)) {
+			return splitByCustomDelimiter(input);
+		} else {
+			return splitByDefaultDelimiter(input);
 		}
+	}
+
+	private String[] splitByDefaultDelimiter(String input) {
 		String[] tokens = input.split(",|\n");
 		return tokens;
+	}
+
+	private String[] splitByCustomDelimiter(String input) {
+		Matcher m = Pattern.compile("//(.)\n(.*)").matcher(input);
+		m.matches();
+		String customDelimiter = m.group(1);
+		String numbers = m.group(2);
+		return numbers.split(customDelimiter);
+	}
+
+	private boolean isCustomDelimiter(String input) {
+		return input.startsWith("//");
 	}
 
 	private int sumOfNumbers(String[] numbers) {
