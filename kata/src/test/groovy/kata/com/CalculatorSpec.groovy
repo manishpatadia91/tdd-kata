@@ -21,7 +21,7 @@ class CalculatorSpec extends Specification{
 			"1\n2,3"				||		6
 			"1,\n"					||		1
 			"//;\n1;2"				||		3
-			"//.\n1.2"				||		6
+			"//.\n1.2"				||		3
 	}
 		
 }
