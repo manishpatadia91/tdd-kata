@@ -6,8 +6,13 @@ public class Calculator {
 		if (input.isEmpty()) {
 			return 0;
 		}
-		String[] numbers = input.split(",|\n");
+		String[] numbers = splitNumbers(input);
 		return sumOfNumbers(numbers);
+	}
+
+	private String[] splitNumbers(String input) {
+		String[] numbers = input.split(",|\n");
+		return numbers;
 	}
 
 	private int sumOfNumbers(String[] numbers) {
