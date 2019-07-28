@@ -31,7 +31,7 @@ public class Calculator {
 		m.matches();
 		String customDelimiter = m.group(1);
 		String numbers = m.group(2);
-		return numbers.split(customDelimiter);
+		return numbers.split(Pattern.quote(customDelimiter));
 	}
 
 	private boolean isCustomDelimiter(String input) {
